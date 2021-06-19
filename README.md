@@ -1,14 +1,15 @@
 <!-- GETTING STARTED -->
-## Getting Started
+## Smart Driver Capacity Management
 Smart driver capacity management to assign meal orders to delivery drivers, assigning more than one order to the same driver at the same time.
 
 
 ![Untitled drawing (1)](https://user-images.githubusercontent.com/4533327/122641653-5ffc0a80-d10f-11eb-9411-7f55ad2a4872.png)
 
+Let's agree on glossaries below:
 1. Trip : is a journey that Driver makes to a particular place ( Customer's location ).
 2. Collection : is the driver basket that inlcudes set of orders. 
 
-
+There are main 3 entities in the algorithm
 1. Driver 
 3. Restaurant 
 2. Order and Order Item
