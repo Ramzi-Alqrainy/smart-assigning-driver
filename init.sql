@@ -1,4 +1,11 @@
 
+-- prepare_tolerence_minutes = how many minutes you are allowed to wait between orders
+-- collection_tolerence_minutes = how many minutes you are allowed to wait the whole collection before you leave the rest
+-- max_agg_orders = Max orders per collection to get from rest before you leave. 
+-- max_agg_order_items = Max order items per collection to get from rest before you leave. 
+-- here you take the minmum between max_agg_orders and max_agg_order_items. 
+-- item_handling_seconds and order_handling_seconds = handling time per order and item order
+
 CREATE TABLE restaurants (
    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
    name TEXT NOT NULL,
@@ -12,6 +19,8 @@ CREATE TABLE restaurants (
 );
 
 -- meal
+-- prepare_minutes = prepartion time for one order
+-- delay_tolerence_minutes = some order like cold order can be delayed not like hot item. 
 CREATE TABLE menu_items (
    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
    name TEXT NOT NULL,
@@ -27,7 +36,11 @@ CREATE TABLE menu_items (
 CREATE INDEX rf_ix_menu__restaurant ON menu_items(rid);
 
 -- Nhoods: nhood, postcode, orders_count, sum_km, sum_h, avg_speed_kmph, correction_factor...
-
+-- heuristic_id = postal code 
+-- collection_deadline = when collection should be leave the resturnet = NOW + collection_tolerence_minutes
+-- is_closed = the collection is full ?
+-- st_* = statistics 
+-- This table is denormalized 
 CREATE TABLE aggregations (
    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
    rid INTEGER NOT NULL,
@@ -69,16 +82,16 @@ CREATE TABLE orders (
    st_pending_count INTEGER NOT NULL DEFAULT 0, -- stats: unprepared menu items count
    est_prepared_at INTEGER NOT NULL,
    est_direct_eta INTEGER NOT NULL,
-   prepared_at INTEGER DEFAULT NULL,
+   prepared_at INTEGER DEFAULT NULL, -- real prepared at 
    collection_deadline INTEGER DEFAULT NULL, -- prepared_at+60*rest.collection_tolerence_minutes
    delivered_at INTEGER DEFAULT NULL,
-   preperation_drift_seconds INTEGER DEFAULT NULL,
-   delivery_drift_seconds INTEGER DEFAULT NULL,
-   heuristic_distance REAL NOT NULL,
-   heuristic_id TEXT DEFAULT NULL,
+   preperation_drift_seconds INTEGER DEFAULT NULL, -- prepared_at - est_prepared_at
+   delivery_drift_seconds INTEGER DEFAULT NULL, -- preperation_drift_seconds - est_direct_eta
+   heuristic_distance REAL NOT NULL, 
+   heuristic_id TEXT DEFAULT NULL, -- postal code
    is_agg INTEGER NOT NULL DEFAULT 0, -- 0: not part of agg, 1 part of agg
    status INTEGER NOT NULL DEFAULT 0, -- 0 not prepared, 1 partly prepared, 2 prepared, 3 collected, 4 delivered
-   agg_id INTEGER DEFAULT NULL,
+   agg_id INTEGER DEFAULT NULL, 
    CONSTRAINT rf_order__restaurant FOREIGN KEY (rid) 
       REFERENCES restaurants (id) 
          ON DELETE RESTRICT 
