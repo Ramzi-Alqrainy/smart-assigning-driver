@@ -6,9 +6,10 @@
 3. Restaurant 
 2. Order and Order Item
 
-<img width="1194" alt="Screen Shot 2021-06-19 at 2 31 31 PM" src="https://user-images.githubusercontent.com/4533327/122641086-ae0f0f00-d10b-11eb-856c-94ef6ba983da.png">
-<img width="1199" alt="Screen Shot 2021-06-19 at 2 33 04 PM" src="https://user-images.githubusercontent.com/4533327/122641090-b36c5980-d10b-11eb-8a9f-32b7c3b3b0d4.png">
-<img width="1198" alt="Screen Shot 2021-06-19 at 2 33 32 PM" src="https://user-images.githubusercontent.com/4533327/122641091-b5361d00-d10b-11eb-80e7-9d129778117c.png">
+![alt text](https://user-images.githubusercontent.com/4533327/122641086-ae0f0f00-d10b-11eb-856c-94ef6ba983da.png)
+![alt text](https://user-images.githubusercontent.com/4533327/122641090-b36c5980-d10b-11eb-8a9f-32b7c3b3b0d4.png)
+![alt text](https://user-images.githubusercontent.com/4533327/122641091-b5361d00-d10b-11eb-80e7-9d129778117c.png)
+
 
 
 ```
