@@ -6,10 +6,9 @@
 3. Restaurant 
 2. Order and Order Item
 
-![alt text](https://user-images.githubusercontent.com/4533327/122641086-ae0f0f00-d10b-11eb-856c-94ef6ba983da.png)
-![alt text](https://user-images.githubusercontent.com/4533327/122641090-b36c5980-d10b-11eb-8a9f-32b7c3b3b0d4.png)
-![alt text](https://user-images.githubusercontent.com/4533327/122641091-b5361d00-d10b-11eb-80e7-9d129778117c.png)
-
+<img src="https://user-images.githubusercontent.com/4533327/122641086-ae0f0f00-d10b-11eb-856c-94ef6ba983da.png"/>
+<img src="https://user-images.githubusercontent.com/4533327/122641090-b36c5980-d10b-11eb-8a9f-32b7c3b3b0d4.png"/>
+<img src="https://user-images.githubusercontent.com/4533327/122641091-b5361d00-d10b-11eb-80e7-9d129778117c.png"/>
 
 
 ```
