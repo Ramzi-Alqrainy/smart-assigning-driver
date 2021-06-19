@@ -1,3 +1,11 @@
+1. Trip : is a journey that Driver makes to a particular place ( Customer's location ).
+2. Collection : is the driver basket that inlcudes set of orders. 
+
+
+1. Driver 
+3. Restaurant 
+2. Order and Order Item
+
 ```
 $ rm db.sq3 ; cat init.sql data.sql | sqlite3 db.sq3
 $ php order.php 1 31.9539 35.9106 1 2 3
