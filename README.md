@@ -16,6 +16,18 @@ There are main 3 entities in the algorithm
 
 When it comes to food, temperature is just as important as taste. No matter how delicious your juicy burger is, no one will take a bite if it’s as cold as ice. Transporting hot and cold foods together, in the same container, can compromise the safety and integrity of your meals. Train delivery staff to use insulated hot and cold bags to keep food at the appropriate temperature.
 
+Database Structure:
+
+<img width="971" alt="Screen Shot 2021-06-29 at 11 09 46 PM" src="https://user-images.githubusercontent.com/4533327/123861006-50f73280-d92f-11eb-9b37-1c5f6928fb2d.png">
+
+Where 
+1. prepare_tolerence_minutes = how many minutes you are allowed to wait between orders
+2. collection_tolerence_minutes = how many minutes you are allowed to wait the whole collection before you leave the rest
+3. max_agg_orders = Max orders per collection to get from rest before you leave. 
+4. max_agg_order_items = Max order items per collection to get from rest before you leave. 
+- here you take the minmum between max_agg_orders and max_agg_order_items. 
+5. item_handling_seconds and order_handling_seconds = handling time per order and item order
+
 
 ### Installation
 <img src="https://user-images.githubusercontent.com/4533327/122641086-ae0f0f00-d10b-11eb-856c-94ef6ba983da.png"/>
