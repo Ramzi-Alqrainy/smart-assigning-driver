@@ -14,6 +14,9 @@ There are main 3 entities in the algorithm
 3. Restaurant 
 2. Order and Order Item
 
+When it comes to food, temperature is just as important as taste. No matter how delicious your juicy burger is, no one will take a bite if it’s as cold as ice. Transporting hot and cold foods together, in the same container, can compromise the safety and integrity of your meals. Train delivery staff to use insulated hot and cold bags to keep food at the appropriate temperature.
+
+
 ### Installation
 <img src="https://user-images.githubusercontent.com/4533327/122641086-ae0f0f00-d10b-11eb-856c-94ef6ba983da.png"/>
 <img src="https://user-images.githubusercontent.com/4533327/122641090-b36c5980-d10b-11eb-8a9f-32b7c3b3b0d4.png"/>
